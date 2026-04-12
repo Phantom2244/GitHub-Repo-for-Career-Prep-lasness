@@ -16,4 +16,5 @@ add_executable(GitHub Repo for Career Prep
         Mage.h
         main.cpp
         Rogue.cpp
-        Rogue.h)
+        Rogue.h
+)
