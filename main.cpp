@@ -366,15 +366,15 @@ int main() {
 
             if (party_being_shielded == false) {
                 if (which_dragon_attack <= 3) {
-                    cout << "The Dragon slashes at " + dragon_target_str + "!" << endl; // TODO UPDATE ME, ADD SLASH EFFECT
+                    cout << "The Dragon slashes at " + dragon_target_str + "!" << endl;
                     party[dragon_target]->harmed(dragon[0]->get_attack());
                 }
                 else if (which_dragon_attack <= 5) {
-                    cout << "The Dragon bites " + dragon_target_str + "!" << endl; // TODO UPDATE ME, ADD SLASH EFFECT
+                    cout << "The Dragon bites " + dragon_target_str + "!" << endl;
                     party[dragon_target]->harmed((dragon[0]->get_attack())*2);
                 }
                 else {
-                    cout << "The Dragon breaths fire on the party!" << endl; // TODO UPDATE ME, ADD FIRE EFFECT
+                    cout << "The Dragon breaths fire on the party!" << endl;
                     party[0]->harmed(dragon[0]->get_attack());
                     party[1]->harmed(dragon[0]->get_attack());
                     party[2]->harmed(dragon[0]->get_attack());
@@ -382,20 +382,20 @@ int main() {
             }
             else {
                 if (which_dragon_attack <= 3) {
-                    cout << "The Dragon attempts to slash at " + dragon_target_str + "!" << endl; // TODO UPDATE ME, ADD SLASH EFFECT
-                    cout << "The Knight protects " + dragon_target_str + "!" << endl; // TODO UPDATE ME, ADD SHIELD EFFECT
+                    cout << "The Dragon attempts to slash at " + dragon_target_str + "!" << endl;
+                    cout << "The Knight protects " + dragon_target_str + "!" << endl;
                     party[0]->harmed(dragon[0]->get_attack());
                     party_being_shielded = false;
                 }
                 else if (which_dragon_attack <= 5) {
-                    cout << "The Dragon attempts to bite " + dragon_target_str + "!" << endl; // TODO UPDATE ME, ADD SLASH EFFECT
-                    cout << "The Knight protects " + dragon_target_str + "!" << endl; // TODO UPDATE ME, ADD SHIELD EFFECT
+                    cout << "The Dragon attempts to bite " + dragon_target_str + "!" << endl;
+                    cout << "The Knight protects " + dragon_target_str + "!" << endl;
                     party[0]->harmed((dragon[0]->get_attack())*2);
                     party_being_shielded = false;
                 }
                 else {
-                    cout << "The Dragon attempts to breath fire on the party!" << endl; // TODO UPDATE ME, ADD FIRE EFFECT
-                    cout << "The Knight protects the party!" << endl; // TODO UPDATE ME, ADD SHIELD EFFECT
+                    cout << "The Dragon attempts to breath fire on the party!" << endl;
+                    cout << "The Knight protects the party!" << endl;
                     party[0]->harmed((dragon[0]->get_attack())*3);
                     party_being_shielded = false;
                 }
@@ -404,7 +404,6 @@ int main() {
     }
     if (dragon[0]->get_hp() <= 0) {
         cout << "The Dragon has been defeated! You win!" << endl;
-       // TODO File i/o (read a scoreboard.csv and write to a scoreboard.csv)
     }
     else {
         cout << "The party has been defeated..." << endl;
